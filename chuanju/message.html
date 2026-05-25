@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>互动留言 - 川剧变脸</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/message.css">
+</head>
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/logo.png" alt="川剧变脸Logo" style="height: 40px; margin-right: 10px;">川剧变脸 · 非遗传承</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+        <li class="nav-item"><a class="nav-link" href="works.html">作品展示</a></li>
+        <li class="nav-item"><a class="nav-link" href="inheritor.html">传承人</a></li>
+        <li class="nav-item"><a class="nav-link" href="craft.html">工艺科普</a></li>
+        <li class="nav-item"><a class="nav-link active" href="message.html">留言互动</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="pt-5 mt-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">互动留言区</h2>
+      <p class="text-muted">留下你对川剧变脸非遗文化的祝福与见解</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form id="messageForm" class="bg-light p-4 rounded shadow-sm mb-5">
+          <div class="mb-3">
+            <label class="form-label">你的姓名<span class="text-danger">*</span></label>
+            <input type="text" id="name" class="form-control" placeholder="请输入姓名" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">联系电话</label>
+            <input type="tel" id="phone" class="form-control" placeholder="请输入手机号码">
+            <div id="phoneTip" class="invalid-feedback"></div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">电子邮箱</label>
+            <input type="email" id="email" class="form-control" placeholder="请输入电子邮箱">
+            <div id="emailTip" class="invalid-feedback"></div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">留言内容 <span class="text-danger">*</span></label>
+            <textarea id="content" class="form-control" rows="4" placeholder="请输入留言内容" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">提交留言</button>
+        </form>
+
+
+        <div id="msgContainer" class="bg-white rounded shadow-sm p-3"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-white text-center py-4 mt-5">
+  <div class="container">
+    <p class="mb-0">川剧变脸非遗文化网 &copy; 2026 非遗传承保护</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/message.js"></script>
+</body>
+</html>
